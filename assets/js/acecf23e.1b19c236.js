@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbuildcamp=self.webpackChunkbuildcamp||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/buildcamp-site/blog","blogTitle":"Blog","authorsListPath":"/buildcamp-site/blog/authors"}')}}]);
