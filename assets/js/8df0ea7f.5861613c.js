@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbuildcamp=self.webpackChunkbuildcamp||[]).push([[6752],{4213:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/buildcamp-site/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
