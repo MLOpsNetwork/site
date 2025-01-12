@@ -1,23 +1,37 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    github: yangshun
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+gouravshah:
+  name: Gourav Shah
+  title: Corporate Trainer | Founder, School of Devops
+  url: https://www.linkedin.com/in/gouravshah
+  image_url: https://github.com/initcron.png
   page:
     # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+    permalink: '/all-gourav-shah-articles'
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    x: gouravshah
+    linkedin: gouravshah
+    github: initcron
+    newsletter: https://devops.tube
+
+yangshun:
+  name: Gourav Shah
+  title: Corporate Trainer | Founder, School of Devops
+  url: https://www.linkedin.com/in/gouravshah
+  image_url: https://github.com/initcron.png
+  page: true
+  socials:
+    x: gouravshah
+    github: initcron
+
+slorber:
+  name: Gourav Shah
+  title: Corporate Trainer | Founder, School of Devops
+  url: https://www.linkedin.com/in/gouravshah
+  image_url: https://github.com/initcron.png
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-gouravshah-articles'
+  socials:
+    x: gouravshah
+    linkedin: gouravshah
+    github: initcron
+    newsletter: https://devops.tube

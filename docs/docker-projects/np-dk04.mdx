@@ -1,0 +1,120 @@
+---
+sidebar_position: 4
+---
+
+# NP-DK04: Build Image for Springboot App
+
+:::tip Project Overview
+Create an optimized container image for a Java Spring Boot voting service, focusing on JVM optimization and efficient resource utilization.
+:::
+
+## Service Details
+```java title="Service Configuration"
+{
+    "path": "/voting",
+    "language": "Java",
+    "framework": "Spring Boot",
+    "port": 8080,
+    "build": "mvn package",
+    "launch": ["java", "-jar", "app.jar"]
+}
+```
+
+## Technical Requirements
+
+### Prerequisites
+- Docker installed locally
+- Git for version control
+- Basic Java/Spring knowledge
+- Maven understanding
+- IDE or text editor
+- GitHub account
+
+:::info Base Repository
+https://github.com/craftista/craftista
+:::
+
+### Implementation Requirements
+
+#### ☕ Java-Specific Considerations
+- JVM optimization settings
+- Spring Boot configuration
+- Maven dependency management
+- JAR file handling
+
+#### 🔒 Security Measures
+- Minimal JRE base image
+- Non-root user execution
+- Secure dependency management
+- Spring Security configuration
+
+#### ⚡ Optimization Requirements
+- Multi-stage build implementation
+- Maven dependency caching
+- Layer optimization
+- JVM tuning parameters
+
+:::warning Important Considerations
+- Spring profiles configuration
+- Environment variables handling
+- Health check implementation
+- Development workflow setup
+:::
+
+## Community Learning
+
+### Weekly Schedule
+- Monday: New project release
+- Thursday: Live Build Session on [YouTube Channel Link]
+  - Java containerization demo
+  - Spring Boot best practices
+  - Interactive Q&A
+
+### Share Your Work
+Join the learning community on r/devopsbuilders:
+- Use "Devops Buildcamp" flair
+- Include PR-DK04 in post title
+- Share your approach
+- Discuss Java containerization
+- Help others learn
+
+:::note Remember
+Share your Java containerization insights and learn from the community!
+:::
+
+## Reference Commands
+
+```bash title="Build & Run Commands"
+# Build the application
+mvn package
+
+# Launch the application
+java -jar app.jar
+
+# Default port
+8080
+```
+
+## Best Practices Implementation Guide
+
+### Java Container Setup
+```dockerfile title="Example Multi-Stage Structure"
+# Build stage
+FROM maven:3.8.4-openjdk-17 AS builder
+WORKDIR /app
+COPY pom.xml .
+RUN mvn dependency:go-offline
+COPY src ./src
+RUN mvn package -DskipTests
+
+# Production stage
+FROM eclipse-temurin:17-jre-alpine
+WORKDIR /app
+COPY --from=builder /app/target/*.jar app.jar
+USER nobody
+ENTRYPOINT ["java", "-jar", "app.jar"]
+```
+
+:::tip Pro Tip
+Remember to optimize your JVM settings and Spring Boot configuration for containerized environments!
+:::

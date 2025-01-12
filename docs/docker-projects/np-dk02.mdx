@@ -1,0 +1,120 @@
+---
+sidebar_position: 2
+---
+
+# NP-DK02: Build Image for a Python App
+
+:::tip Project Overview
+Create an optimized container image for a Python Flask-based catalogue service, focusing on Python-specific best practices and efficient dependency management.
+:::
+
+## Service Details
+```python title="Service Configuration"
+{
+    "path": "/catalogue",
+    "language": "Python",
+    "framework": "Flask",
+    "port": 5000,
+    "build": "pip install -r requirements.txt",
+    "launch": ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+}
+```
+
+## Technical Requirements
+
+### Prerequisites
+- Docker installed locally
+- Git for version control
+- Basic Python knowledge
+- Understanding of Flask
+- IDE or text editor
+- GitHub account
+
+:::info Base Repository
+https://github.com/craftista/craftista
+:::
+
+### Implementation Requirements
+
+#### 🐍 Python-Specific Considerations
+- Virtual environment handling
+- Package dependency management
+- Gunicorn configuration
+- Flask development vs production
+
+#### 🔒 Security Measures
+- Use minimal Python base image
+- Run as non-root user
+- Implement least privilege
+- Secure dependency management
+
+#### ⚡ Optimization Requirements
+- Multi-stage build implementation
+- Python package caching
+- Layer optimization
+- Final image size reduction
+
+:::warning Important Considerations
+- Handle Python environment variables
+- Configure Gunicorn properly
+- Implement health checks
+- Consider development workflow
+:::
+
+## Community Learning
+
+### Weekly Schedule
+- Monday: New project release
+- Thursday: Live Build Session on [YouTube Channel Link]
+  - Python containerization demo
+  - Flask-specific practices
+  - Interactive problem-solving
+
+### Share Your Work
+Join the learning community on r/devopsbuilders:
+- Use "Devops Buildcamp" flair
+- Include PR-DK02 in post title
+- Share your approach
+- Discuss Python containerization
+- Help others learn
+
+:::note Remember
+This is about learning together - share your experiences and learn from others!
+:::
+
+## Reference Commands
+
+```bash title="Build & Run Commands"
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch with Gunicorn
+gunicorn --bind 0.0.0.0:5000 app:app
+
+# Default port
+5000
+```
+
+## Best Practices Implementation Guide
+
+### Python Container Setup
+```dockerfile title="Example Multi-Stage Structure"
+# Build stage
+FROM python:3.9 AS builder
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --user -r requirements.txt
+
+# Production stage
+FROM python:3.9-slim
+WORKDIR /app
+COPY --from=builder /root/.local /root/.local
+COPY . .
+ENV PATH=/root/.local/bin:$PATH
+USER nobody
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+```
+
+:::tip Pro Tip
+When working with Python containers, pay special attention to the virtual environment and dependency management!
+:::

@@ -1,0 +1,127 @@
+---
+slug: getting-started
+title: Getting Started with DevOps Buildcamp
+authors: [gouravshah]
+tags: [guide, getting-started]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Getting Started with DevOps Buildcamp
+
+Hey there! Ready to start your DevOps journey? You're in the right place. In this guide, I'll walk you through how to get started with DevOps Buildcamp and begin building practical skills that matter in the industry.
+
+## What You'll Need
+
+Before we dive in, let's make sure you have the basics ready. Don't worry if you're missing something - these are all free tools that are easy to set up:
+
+- A computer with any modern operating system
+- Basic familiarity with command line
+- Git installed on your machine
+- A GitHub account
+- Enthusiasm to learn!
+
+:::tip Not a programmer? No problem!
+You don't need to be a programming expert to get started. Basic knowledge of any programming language is helpful, but we'll guide you through everything step by step.
+:::
+
+## Setting Up Your Environment
+
+Let's get your development environment ready. Choose your operating system:
+
+<Tabs>
+  <TabItem value="linux" label="Linux" default>
+    Open your terminal and run:
+    ```bash
+    # Install Docker
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+    
+    # Add yourself to docker group
+    sudo usermod -aG docker $USER
+    ```
+  </TabItem>
+  <TabItem value="mac" label="MacOS">
+    ```bash
+    # Install Homebrew if you haven't already
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    
+    # Install Docker Desktop for Mac
+    brew install --cask docker
+    ```
+  </TabItem>
+  <TabItem value="windows" label="Windows">
+    1. Download and install Docker Desktop from [Docker's website](https://www.docker.com/products/docker-desktop)
+    2. Install Git from [git-scm.com](https://git-scm.com/)
+  </TabItem>
+</Tabs>
+
+## Your First Project: Hello Craftista!
+
+Let's get hands-on with Craftista, our learning application. Here's what we're going to do:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/craftista/craftista
+   cd craftista
+   ```
+
+2. Start the application:
+   ```bash
+   docker-compose up -d
+   ```
+
+3. Visit http://localhost:3000 in your browser
+
+Congratulations! You've just deployed your first microservices application. 🎉
+
+:::info What's happening here?
+Craftista isn't just another "Hello World" app. You've just launched multiple services working together - a frontend, a catalog service, a voting system, and more. We'll explore each part in upcoming projects.
+:::
+
+## Join the Community
+
+DevOps is better learned together. Here's how to connect:
+
+1. **Join r/DevOpsBuilders**: Our Reddit community is where we share knowledge, ask questions, and help each other grow.
+
+2. **Star the Repository**: Head over to [Craftista on GitHub](https://github.com/craftista) and star the repository to stay updated.
+
+3. **Share Your Progress**: Started working on something? Share it with the community! Use the #DevOpsBuildcamp hashtag.
+
+## What's Next?
+
+Now that you have your environment set up, here are some project ideas to get started:
+
+1. **Containerization**: Explore how each service in Craftista is containerized
+2. **Docker Compose**: Understand how the services work together
+3. **CI/CD**: Set up a basic GitHub Actions pipeline
+4. **Kubernetes**: Deploy Craftista on a local Kubernetes cluster
+
+## Tips for Success
+
+As someone who's helped numerous professionals learn DevOps, here are my top tips:
+
+1. **Start Small**: Focus on understanding one concept at a time
+2. **Practice Regularly**: Even 30 minutes a day makes a difference
+3. **Ask Questions**: Our community is here to help
+4. **Document Your Journey**: Keep notes of what you learn
+5. **Help Others**: Teaching is the best way to learn
+
+## Let's Build Together
+
+DevOps Buildcamp is more than just tutorials and projects - it's a community of builders helping each other grow. Don't be afraid to:
+
+- Ask questions when you're stuck
+- Share your successes and failures
+- Help others when you can
+- Suggest improvements
+
+Remember, everyone starts somewhere. The most important step is the first one - and you've already taken it by being here.
+
+Ready to dive deeper? Check out the projects section and pick your first challenge. See you in the community! 🚀
+
+---
+
+_Got questions? Join us on Reddit at r/DevOpsBuilders or create an issue on our GitHub repository._

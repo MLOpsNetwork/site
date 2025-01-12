@@ -1,0 +1,118 @@
+---
+sidebar_position: 3
+---
+
+# PR-DK03: Build Image for Go App
+
+:::tip Project Overview
+Develop a container image for a Go-based recommendation service, leveraging Go's static binary compilation and minimal container footprint.
+:::
+
+## Service Details
+```go title="Service Configuration"
+{
+    "path": "/recommendation",
+    "language": "Go",
+    "framework": "Native Go",
+    "port": 8080,
+    "build": "go build -o app",
+    "launch": "./app"
+}
+```
+
+## Technical Requirements
+
+### Prerequisites
+- Docker installed locally
+- Git for version control
+- Basic Go knowledge
+- IDE or text editor
+- GitHub account
+
+:::info Base Repository
+https://github.com/craftista/craftista
+:::
+
+### Implementation Requirements
+
+#### 🚀 Go-Specific Considerations
+- Static binary compilation
+- Go modules management
+- Multi-stage build optimization
+- Small base image selection
+
+#### 🔒 Security Measures
+- Minimal base image (scratch/alpine)
+- Non-root user execution
+- Least privilege principle
+- Security scanning integration
+
+#### ⚡ Optimization Requirements
+- Multi-stage build for minimal size
+- Go build flags optimization
+- Layer caching strategy
+- Final binary optimization
+
+:::warning Important Considerations
+- Static linking considerations
+- CGO dependencies handling
+- Cross-compilation options
+- Development workflow
+:::
+
+## Community Learning
+
+### Weekly Schedule
+- Monday: New project release
+- Thursday: Live Build Session on [YouTube Channel Link]
+  - Go containerization demo
+  - Best practices discussion
+  - Interactive Q&A
+
+### Share Your Work
+Join the learning community on r/devopsbuilders:
+- Use "Devops Buildcamp" flair
+- Include PR-DK03 in post title
+- Share your approach
+- Discuss Go containerization
+- Help others learn
+
+:::note Remember
+Share your Go containerization journey with the community!
+:::
+
+## Reference Commands
+
+```bash title="Build & Run Commands"
+# Build the application
+go build -o app
+
+# Launch the application
+./app
+
+# Default port
+8080
+```
+
+## Best Practices Implementation Guide
+
+### Go Container Setup
+```dockerfile title="Example Multi-Stage Structure"
+# Build stage
+FROM golang:1.19 AS builder
+WORKDIR /app
+COPY go.* ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=0 GOOS=linux go build -o app
+
+# Production stage
+FROM scratch
+COPY --from=builder /app/app /app
+USER nobody
+ENTRYPOINT ["/app"]
+```
+
+:::tip Pro Tip
+Go's ability to create static binaries makes it perfect for creating ultra-small container images!
+:::

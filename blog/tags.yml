@@ -3,15 +3,20 @@ facebook:
   permalink: /facebook
   description: Facebook tag description
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+getting-started:
+  label: Getting Started
+  permalink: /getting-started
+  description: Getting Started
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+guide:
+  label: Guide
+  permalink: /guide
+  description: Guide tag description
+
+welcome:
+  label: Welcome
+  permalink: /welcome
+  description: Welcome tag description
 
 hola:
   label: Hola

@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Buildcamps',
-  tagline: 'Build Real world Skills One Projet at a Time',
+  title: 'FREE Devops Buildcamp 2025',
+  tagline: 'Build real world skills, one project a week',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -76,7 +76,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Buildcamp',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -86,12 +86,12 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Projects',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'About Devops Buildcamp', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://www.reddit.com/r/devopsbuilders/',
+            label: 'Reddit',
             position: 'right',
           },
         ],
@@ -100,28 +100,28 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Resources',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Projects',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Get Started',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Reddit',
+                href: 'https://www.reddit.com/r/devopsbuilders/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Newsletter',
+                href: 'https://devops.tube',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Youtube Livestream',
+                href: 'https://www.youtube.com/c/schoolofdevops',
               },
             ],
           },
@@ -129,17 +129,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
+                label: 'Updates',
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'School of Devops',
+                href: 'https://schoolofdevops.com/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Devops Buildcamp by School of Devops.`,
       },
       prism: {
         theme: prismThemes.github,

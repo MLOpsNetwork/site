@@ -1,0 +1,119 @@
+---
+sidebar_position: 1
+---
+
+# NP-DK01: Build Image for a NodeJS App
+
+:::tip Project Overview
+Build and optimize a container image for a Node.js/Express.js frontend service, implementing Docker best practices and security measures.
+:::
+
+## Service Details
+```jsx title="Service Configuration"
+{
+  path: "/frontend",
+  runtime: "Node.js",
+  framework: "Express.js",
+  port: 3000,
+  build: "npm install",
+  launch: "node app.js"
+}
+```
+
+## Technical Requirements
+
+### Prerequisites
+- Docker installed locally
+- Git for version control
+- Basic Node.js understanding
+- IDE or text editor
+- GitHub account
+
+:::info Base Repository
+https://github.com/craftista/craftista
+:::
+
+### Implementation Requirements
+
+#### 🔒 Security Measures
+- Run application as non-root user
+- Implement principle of least privilege
+- Use minimal base image
+- Remove unnecessary build tools
+
+#### ⚡ Optimization Requirements
+- Optimize layer caching
+- Minimize final image size
+- Implement proper layer ordering
+- Handle dependency caching effectively
+
+#### 🛠 Configuration
+- Expose port 3000
+- Set appropriate environment variables
+- Configure health check
+- Define volume mounts if needed
+
+:::warning Important Considerations
+- Consider development vs production environments
+- Implement proper error handling
+- Include meaningful documentation
+- Follow security best practices
+:::
+
+## Community Learning
+
+### Weekly Schedule
+- Monday: New project release
+- Thursday: Live Build Session on [YouTube Channel Link]
+  - Real-time containerization
+  - Best practices discussion
+  - Interactive Q&A
+
+### Share Your Work
+Join the learning community on r/devopsbuilders:
+- Use "Devops Buildcamp" flair
+- Include PR-DK01 in post title
+- Share your GitHub repository
+- Discuss your approach
+- Engage with peers
+
+:::note Remember
+This is a community learning initiative - there's no formal evaluation, just peer learning and knowledge sharing!
+:::
+
+## Reference Commands
+
+```bash title="Build & Run Commands"
+# Build the application
+npm install
+
+# Launch the application
+node app.js
+
+# Default port
+3000
+```
+
+## Best Practices Implementation Guide
+
+### Multi-Stage Build Pattern
+```dockerfile title="Example Multi-Stage Structure"
+# Build stage
+FROM node:18 AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+
+# Production stage
+FROM node:18-slim
+WORKDIR /app
+COPY --from=builder /app ./
+USER node
+CMD ["node", "app.js"]
+```
+
+:::tip Pro Tip
+Remember to optimize your Dockerfile for the development environment while maintaining security best practices!
+:::
+
