@@ -16,16 +16,16 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18 # Ensure a compatible Node.js version
-          cache: yarn # Caches dependencies to speed up builds
-
       - name: Enable Corepack
         run: corepack enable
 
       - name: Set Yarn Version
         run: corepack prepare yarn@4.6.0 --activate
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18 # Ensure a compatible Node.js version
+          cache: yarn # Caches dependencies to speed up builds
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
