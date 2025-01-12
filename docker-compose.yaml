@@ -1,0 +1,10 @@
+services:
+  buildcamp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: schoolofdevops/buildcamp:latest
+    container_name: buildcamp
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
