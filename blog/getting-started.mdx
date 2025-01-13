@@ -1,0 +1,154 @@
+---
+sidebar_position: 1
+id: getting-started
+title: Getting Started with Devops Buildcamp
+description: Begin your devops journey with Craftista learning app
+slug: /getting-started
+---
+
+# Getting Started with Devops Buildcamp
+
+Welcome to your devops learning journey! This guide will help you get started with the Craftista learning app - a polyglot, microservices-based application designed specifically for learning devops through hands-on projects.
+
+## Quick Start Options
+
+You have two paths to begin:
+
+1. **Demo Path (5 minutes)**: If you just want to try out the application quickly:
+   - Visit [Craftista Demo](https://github.com/craftista/craftista-demo)
+   - Follow the quick launch instructions
+
+2. **Builder Path (Recommended)**: For the full learning experience:
+   - Continue reading this guide
+   - Build the project from scratch
+   - Follow our structured learning path
+
+## Understanding Craftista Architecture
+
+Craftista consists of four main microservices:
+
+1. **Frontend Service** (Node.js/Express.js)
+   - Serves as the main UI
+   - Routes and integrates with other services
+   - Used by: Netflix, Uber, PayPal, LinkedIn
+
+2. **Catalogue Service** (Python/Flask)
+   - Manages origami showcase and details
+   - Handles product data
+   - Used by: Netflix, Reddit, Airbnb, LinkedIn
+
+3. **Voting Service** (Java/Spring Boot)
+   - Manages user voting functionality
+   - Handles user interactions
+   - Used by: Adobe, Microsoft, American Express
+
+4. **Recommendation Service** (Golang)
+   - Powers daily origami recommendations
+   - Similar to services used by Google, Dropbox, Uber
+
+## Getting Started with Development
+
+### Prerequisites
+- Git installed on your system
+- Docker and Docker Compose (for containerization)
+- Basic understanding of microservices architecture
+- Your favorite code editor
+
+### Initial Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/craftista/craftista
+cd craftista
+
+# View project structure
+tree .
+```
+
+### Project Structure Overview
+```
+craftista/
+├── frontend/           # Node.js Express frontend
+├── catalogue-service/  # Python Flask service
+├── voting-service/    # Java Spring Boot service
+├── recommendation/    # Golang service
+└── docs/             # Project documentation
+```
+
+## Learning Path
+
+Here's a recommended progression for building your devops skills:
+
+### 1. Basic Projects
+1. **Containerization**
+   - Write Dockerfiles for each service
+   - Create docker-compose for local development
+
+2. **CI Pipeline**
+   - Set up Jenkins or GitHub Actions
+   - Implement automated testing
+
+3. **Kubernetes Deployment**
+   - Create basic K8s manifests
+   - Deploy services to a cluster
+
+### 2. Intermediate Projects
+4. **Helm Packaging**
+   - Create Helm charts
+   - Handle multi-environment deployments
+
+5. **GitOps with ArgoCD**
+   - Implement blue/green deployments
+   - Set up canary releases
+
+6. **Observability**
+   - Configure Prometheus & Grafana
+   - Set up ELK/EFK stack
+
+### 3. Advanced Projects
+7. **Cloud Infrastructure**
+   - Design HA architecture
+   - Implement auto-scaling
+
+8. **Service Mesh**
+   - Deploy Istio
+   - Configure traffic management
+
+9. **Security**
+   - Implement DevSecOps pipeline
+   - Add security scanning
+
+## Feedback and Progress Monitoring
+
+Craftista provides several ways to monitor your progress:
+
+1. **System Info Dashboard**
+   - Container status
+   - Kubernetes cluster info
+   - Load balancer validation
+
+2. **Version Tracking**
+   - Visual version indicators
+   - Deployment validation
+
+3. **Service Status**
+   - Real-time backend service status
+   - API health monitoring
+
+## Getting Help
+
+1. Check the [documentation](https://github.com/craftista)
+2. Join our [community](https://schoolofdevops.com)
+3. Explore the [Devops Mastery System](https://schoolofdevops.com/#why)
+
+## Next Steps
+
+1. Choose your starting project from the learning path
+2. Set up your local development environment
+3. Begin with containerizing the application
+
+Remember: The journey to devops mastery is iterative. Start small, build incrementally, and keep learning!
+
+---
+
+Now that you're ready to begin, we recommend starting with the containerization project. Need specific guidance for any of these steps? Check our detailed guides in the documentation.
