@@ -10,20 +10,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'FREE Devops Buildcamp 2025',
-  tagline: 'Build real world skills, one project a week',
+  title: 'MLOps Network',
+  tagline: 'Building AI's Future, One Pipeline at a Time',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://buildcamp.dev',
+  url: 'https://mlops.network',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'buildcamps', // Usually your GitHub org/user name.
-  projectName: 'buildcamp-site', // Usually your repo name.
+  organizationName: 'MLOpsNetwork', // Usually your GitHub org/user name.
+  projectName: 'site', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -46,7 +46,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/MLOpsNetwork/site/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -57,7 +57,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/MLOpsNetwork/site/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -88,7 +88,7 @@ const config = {
             position: 'left',
             label: 'Projects',
           },
-          {to: '/blog', label: 'About Devops Buildcamp', position: 'left'},
+          {to: '/blog', label: 'About MLOps Network', position: 'left'},
           {
             href: 'https://www.reddit.com/r/devopsbuilders/',
             label: 'Reddit',
@@ -117,11 +117,11 @@ const config = {
               },
               {
                 label: 'Newsletter',
-                href: 'https://devops.tube',
+                href: 'https://mlops.tv',
               },
               {
                 label: 'Youtube Livestream',
-                href: 'https://www.youtube.com/c/schoolofdevops',
+                href: 'https://www.youtube.com/c/MLOpsTV',
               },
             ],
           },
