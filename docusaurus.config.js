@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MLOps Network',
-  tagline: 'Building AI's Future, One Pipeline at a Time',
+  tagline: 'Building Future of AI/ML, One Pipeline at a Time',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
